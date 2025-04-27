@@ -1,0 +1,8 @@
+{
+    "return": 1,
+    "''.join(random.choice(string.ascii_lowercase)": 1,
+    "for": 1,
+    "i": 1,
+    "in": 1,
+    "range(length))": 1
+}

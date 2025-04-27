@@ -1,0 +1,12 @@
+import: 2
+random: 1
+função: 1
+for: 2
+i: 1
+o: 1
+with: 1
+'w',: 1
+10.000: 1
+linhas,: 1
+pode: 1
+diminuir: 1

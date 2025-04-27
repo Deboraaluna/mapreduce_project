@@ -1,0 +1,1 @@
+    for _ in range(10000):  # Gera 10.000 linhas, você pode aumentar ou diminuir

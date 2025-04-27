@@ -1,0 +1,8 @@
+{
+    "with": 1,
+    "open('data.txt',": 1,
+    "'w',": 1,
+    "encoding='utf-8')": 1,
+    "as": 1,
+    "f:": 1
+}

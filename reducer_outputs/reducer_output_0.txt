@@ -1,0 +1,16 @@
+string: 1
+#: 3
+para: 1
+aleatórias: 1
+def: 1
+''.join(random.choice(string.ascii_lowercase): 1
+in: 2
+range(length)): 1
+criar: 1
+f:: 1
+_: 1
+range(10000):: 1
+gera: 1
+você: 1
+aumentar: 1
+ou: 1
