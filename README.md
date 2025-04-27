@@ -49,12 +49,12 @@ Substitua `main.py` pelo nome do arquivo principal do projeto, se necessário.
 
 - `redis-cli`: Execute esse arquivo Arquivo que está dentro do diretório onde o Redis foi instalado.
 
-![exemplo redis-cli](mapreduce_project\img\redis-cli.png)
+![exemplo redis-cli](img\redis-cli.png)
 
 - `start_all.bat`: Depois dê dois cliques nesse arquivo .bat localizado dentro da pasta do projeto, dessa forma esse scrip vai rodar toda aplicação evitando perder tempo rodando varios terminais manualmente.
 - 'obs': você só irar seguir para o próximo passo quando o `start_all.bat` tiver retornando "NENHUMA MENSSAGEM RECEBIDA...
 
-![exemplo Nenhuma msg recebida](mapreduce_project\img\arquivo_bat.png)
+![exemplo Nenhuma msg recebida](img\arquivo_bat.png)
 
 - `redis-cli`: Feito os passos anteriores, volte para o terminal redis-cli que voce abriu e digite o comando a seguir 10x mudando apenas a numeração contida em "chunks".
 # EXEMPLO:
@@ -70,7 +70,7 @@ PUBLISH mapper_done "chunk1.txt"
   ## DICA: OLHAR A IMG 1
 - `start_all.bat`: Por fim, procure nas abas do arquivo bat gerou a que estava retornando "NENHUMA MENSSAGEM ENCONTRADA..., terá atualizado e irá estar carregando e rodando o restante do que é necessário na aplicação.
 
-![exemplo - aplicação rodou e gerou todos os arquivos](mapreduce_project\img\bat_concluido.png)
+![exemplo - aplicação rodou e gerou todos os arquivos](img\bat_concluido.png)
 
 
 ## Contribuindo
