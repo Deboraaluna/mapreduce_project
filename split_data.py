@@ -1,4 +1,3 @@
-# split_data.py
 def dividir_arquivo():
     with open('data.txt', 'r', encoding='utf-8') as file:
         linhas = file.readlines()

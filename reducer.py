@@ -1,7 +1,7 @@
 import redis
 import json
 import os
-import time  # IMPORTANTE: para usar sleep
+import time  
 
 def reduzir(nome_arquivo):
     try:
@@ -25,7 +25,7 @@ def main():
     while True:
         tarefa = r.lpop('reducer_tasks')
         if tarefa is None:
-            time.sleep(0.5)  # Espera meio segundo e tenta de novo!
+            time.sleep(0.5)  
             continue
         
         tarefa = tarefa.decode('utf-8')

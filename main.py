@@ -1,7 +1,7 @@
 import redis
 import time
 import os
-import shuffler  # Importa o script shuffler que você já criou
+import shuffler  
 
 def iniciar_mappers(r):
     print("👉 Iniciando mappers...")
@@ -22,7 +22,7 @@ def esperar_mappers(r):
             print(f"📦 Mapper finalizado ({contador}/10)")
         else:
             print("Nenhuma mensagem recebida. Aguardando...")
-        time.sleep(1)  # Ajuste o tempo de espera para um intervalo mais longo
+        time.sleep(1)  
     print("✅ Todos os mappers terminaram!")
 
 def iniciar_reducers(r, num_reducers=3):
@@ -44,13 +44,13 @@ def esperar_reducers(r, num_reducers=3):
             print(f"🛠️ Reducer finalizado ({contador}/{num_reducers})")
         else:
             print("Nenhuma mensagem recebida. Aguardando...")
-        time.sleep(1)  # Ajuste o tempo de espera para um intervalo mais longo
+        time.sleep(1)  
     print("✅ Todos os reducers terminaram!")
 
 def juntar_resultados():
     print("🧩 Juntando resultados finais...")
     os.makedirs('final', exist_ok=True)
-    os.makedirs('reducer_outputs', exist_ok=True)  # Garantir que o diretório de saídas do reducer exista
+    os.makedirs('reducer_outputs', exist_ok=True) 
 
     with open('final/final_result.txt', 'w', encoding='utf-8') as final_file:
         for nome in os.listdir('reducer_outputs'):
@@ -59,31 +59,23 @@ def juntar_resultados():
     print("🏁 Resultado final gerado em 'final/final_result.txt'.")
 
 def main():
-    os.makedirs('final', exist_ok=True)  # Cria a pasta final se não existir
-    os.makedirs('reducer_outputs', exist_ok=True)  # Cria a pasta reducer_outputs se não existir
-    r = redis.Redis()  # Conecta ao Redis
+    os.makedirs('final', exist_ok=True)  
+    os.makedirs('reducer_outputs', exist_ok=True)  
+    r = redis.Redis()  
 
-    # Inicia os mappers
     iniciar_mappers(r)
     
-    # Espera os mappers finalizarem
     esperar_mappers(r)
 
-    # Executa o shuffle para criar inputs dos reducers
-    shuffler.main()  # Executa o shuffle para criar inputs dos reducers
+    shuffler.main()  
 
-    # Inicia os reducers
     iniciar_reducers(r)
 
-    # Espera os reducers finalizarem
     esperar_reducers(r)
 
-    # Junta os resultados finais
     juntar_resultados()
 
     print("\n🎉 Tudo pronto! Resultado em 'final/final_result.txt'!")
 
 if __name__ == "__main__":
     main()
-#
-# In this code, we have added print statements to provide feedback on the progress of each step.                

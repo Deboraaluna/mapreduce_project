@@ -7,7 +7,6 @@ Este projeto implementa o modelo de programação MapReduce para processar grand
 Certifique-se de ter os seguintes itens instalados em sua máquina:
 - [Git](https://git-scm.com/)
 - [Python 3.x](https://www.python.org/downloads/) (ou outra linguagem usada no projeto)
-- Dependências adicionais listadas no arquivo `requirements.txt` (se aplicável)
 
 ## Clonando o repositório
 
@@ -20,10 +19,10 @@ cd mapreduce_project
 
 ## Instalando dependências
 
-Se o projeto utiliza Python, instale as dependências com:
+O projeto utiliza Python, instale as dependências com:
 
 ```bash
-pip install -r requirements.txt
+pip install -r 
 ```
 
 ## Executando o projeto
@@ -43,7 +42,6 @@ Substitua `main.py` pelo nome do arquivo principal do projeto, se necessário.
 - `mapper.py`: Implementação da função Map.
 - `reducer.py`: Implementação da função Reduce.
 - `data/`: Diretório para armazenar os dados de entrada e saída.
-- `requirements.txt`: Lista de dependências do projeto.
 
 ## Para Rodar
 
